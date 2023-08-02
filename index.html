@@ -15,14 +15,10 @@
       
       <section id="warnings">
         <ul>
-          
           <li class="severe"> The hedgehog's <span data-x>cry</span> sounds eerily similar to the hook from Public Enemy's <i>Welcome to the Terrordome</i>
           <li class="mild"> Like the walrus, hedgehogs lay eggs in clutches of 12 at a time.
-          
           <li class="severe"> You may be able to lure a hedgehog away from children with a platter of guacamole, its favorite meal.
-          
           <li class="severe"> Remember, hedgehogs travel in packs. Where you see one, assume there are others.
-          
         </ul>
       </section>
       
@@ -42,80 +38,89 @@
     </ul>  
 
     <script>
-//1. Find all span tags on the page, and store the result in the variable below
-var spans = $("span");
+      /*
+      YOUR CODE GOES HERE: complete the following items to make the tests pass.
+      For tasks 1 - 6, replace 'null' with the correct jQuery selection.
+      For tasks 7 - 10, provide the correct jQuery selection & action.
+      */
 
-//2. Find all tags with a class of "severe" and store the result
-var severe = $(".severe");
+      //1. Find all span tags on the page, and store the result in the variable below
+      var spans = $("span");
 
-//3. Find the element with an id of "warnings"
-var warnings = $("#warnings");
+      //2. Find all tags with a class of "severe" and store the result
+      var severe = $(".severe");
 
-//4. Find the <li> tags located inside of the element with ID of "warnings"
-var warningItems = $("#warnings li");
+      //3. Find the element with an id of "warnings"
+      var warnings = $("#warnings");
 
-//5. Find the <ul> tag that contains an element with a class of "mild"
-var ul = $("ul:has(.mild)");
+      //4. Find the <li> tags located inside of the element with ID of "warnings"
+      var warningItems = $("#warnings li");
 
-//6. Find all spans with a "data-x" attribute
-var dataX = $("span[data-x]");
+      //5. Find the <ul> tag that contains an element with a class of "mild"
+      var ul = $(".mild").parent("ul");
 
-//7. Change the elements with a class of "purple" to have a background of "magenta"
-$(".purple").css("background-color", "magenta");
+      //6. Find all spans with a "data-x" attribute
+      var dataX = $("[data-x]");
 
-//8. Change the contents of the element with class "continent" to contain "Australia"
-$(".continent").text("Australia");
+      //7. Change the elements with a class of "purple" to have a background of "magenta"
+      $(".purple").css("background-color", "magenta");
 
-//9. Add a class of "stripe" to all odd-numbered list items inside section tags
-$("section li:odd").addClass("stripe");
+      //8. Change the contents of the element with class "continent" to contain "Australia"
+      $(".continent").text("Australia");
 
-//10. Remove the class of "facts" from the <main> element
-$("main").removeClass("facts");
+      //9. Add a class of "stripe" to all odd-numbered list items inside section tags
+      $("section li:odd").addClass("stripe");
 
+      //10. Remove the class of "facts" from the <main> element
+      $("main").removeClass("facts");
 
-</script>
+    </script>
 
     <style>
-body {
-  margin: auto;
-  max-width: 400px;
-  font-family: sans-serif;
-}    
+      body {
+        margin: auto;
+        max-width: 400px;
+        font-family: sans-serif;
+      }    
     
-.test-results {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: #444;
-  color: white;
-  box-shadow: 4px 4px rgba(0, 0, 0, .3);
-  padding: 4px;
-  margin: 0;
-}
-.test-results li {
-  position: relative;
-  width: 100%;
-  display: block;
-  list-style-type: none;
-  padding-right: 24px;
-}
-.test-results [pass]::after, .test-results [fail]::after {
-  padding: 0 4px;
-  border-radius: 4px;
-  position: absolute;
-  right: 20px;
-}
-.test-results [pass]::after {
-  content: "ok";
-  color: white;
-  background: darkolivegreen;
-}
-.test-results [fail]::after {
-  content: "X";
-  color: white;
-  background: firebrick;
-}
+      .test-results {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: #444;
+        color: white;
+        box-shadow: 4px 4px rgba(0, 0, 0, .3);
+        padding: 4px;
+        margin: 0;
+      }
+      
+      .test-results li {
+        position: relative;
+        width: 100%;
+        display: block;
+        list-style-type: none;
+        padding-right: 24px;
+      }
+      
+      .test-results [pass]::after, .test-results [fail]::after {
+        padding: 0 4px;
+        border-radius: 4px;
+        position: absolute;
+        right: 20px;
+      }
+      
+      .test-results [pass]::after {
+        content: "ok";
+        color: white;
+        background: darkolivegreen;
+      }
+      
+      .test-results [fail]::after {
+        content: "X";
+        color: white;
+        background: firebrick;
+      }
     </style>
-  <script src="https://brendenwest.github.io/it121/examples/validate.js"></script>
+    <script src="https://brendenwest.github.io/it121/examples/validate.js"></script>
   </body>
 </html>
